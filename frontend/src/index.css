@@ -1,0 +1,631 @@
+/* Import Modern Fonts - Geist Bold + Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=geist@700,900&display=swap');
+
+/* Glassmorphism Global Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Dark mode (default) */
+body[data-theme="dark"],
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #312e81) !important;
+  color: #ffffff !important;
+}
+
+/* Light mode */
+body[data-theme="light"] {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe, #dbeafe) !important;
+  color: #1e293b !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Headings - Geist Bold for sharp, intelligent tech look */
+h1, h2, h3, h4, h5, h6,
+.chakra-heading,
+.glass-text {
+  font-family: 'Geist', 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Body Text & UI - Inter for perfect readability */
+p, span, div, a, label, input, textarea, select, button,
+.chakra-text,
+.chakra-button,
+.chakra-form-label,
+.chakra-input,
+.chakra-select,
+.chakra-textarea {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Tab Labels - Geist for tech look */
+.chakra-tabs__tab {
+  font-family: 'Geist', 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Stat Numbers - Geist Bold for impact */
+.chakra-stat__number {
+  font-family: 'Geist', 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Table Headers - Geist for clarity */
+.chakra-table th {
+  font-family: 'Geist', 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+
+* {
+  transition: all 300ms ease-in-out;
+}
+
+[data-theme="dark"] * {
+  color-scheme: dark;
+}
+
+[data-theme="light"] * {
+  color-scheme: light;
+}
+
+/* Body text and descriptions use Exo 2 */
+p, span, div, li {
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Headings use Audiowide */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Audiowide', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Light mode base text colors */
+[data-theme="light"] .chakra-text,
+[data-theme="light"] p:not([class*="chakra"]),
+[data-theme="light"] span:not([class*="chakra"]),
+[data-theme="light"] div:not([class*="chakra"]) {
+  color: #1e293b;
+}
+
+/* Dark mode base text colors */
+[data-theme="dark"] .chakra-text,
+[data-theme="dark"] p:not([class*="chakra"]),
+[data-theme="dark"] span:not([class*="chakra"]),
+[data-theme="dark"] div:not([class*="chakra"]) {
+  color: #ffffff;
+}
+
+/* Glass Input Fields - Ocean Blue with Exo 2 */
+/* Dark mode inputs */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+body input,
+body textarea {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(100,200,255,0.1) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(100,200,255,0.35) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25) !important;
+  padding: 14px 18px !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+
+[data-theme="dark"] select,
+body select {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(100,200,255,0.1) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(100,200,255,0.35) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25) !important;
+  padding: 8px 12px !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Light mode inputs */
+[data-theme="light"] input,
+[data-theme="light"] textarea {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(255,255,255,0.8) !important;
+  color: #1e293b !important;
+  border: 1px solid rgba(100,116,139,0.3) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+  padding: 14px 18px !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+
+[data-theme="light"] select {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(255,255,255,0.8) !important;
+  color: #1e293b !important;
+  border: 1px solid rgba(100,116,139,0.3) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important;
+  padding: 8px 12px !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Select dropdown - Smooth animations */
+select,
+.chakra-select {
+  cursor: pointer !important;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Dark mode select */
+[data-theme="dark"] select,
+[data-theme="dark"] .chakra-select,
+body select,
+body .chakra-select {
+  background: rgba(100,200,255,0.1) !important;
+  color: #ffffff !important;
+  height: auto !important;
+  min-height: 44px !important;
+  border-width: 1px !important;
+}
+
+[data-theme="dark"] select:hover,
+[data-theme="dark"] .chakra-select:hover,
+body select:hover,
+body .chakra-select:hover {
+  background: rgba(100,200,255,0.15) !important;
+  border-color: rgba(100,200,255,0.5) !important;
+  box-shadow: 0 0 0 3px rgba(100,200,255,0.1) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme="dark"] select:focus,
+[data-theme="dark"] .chakra-select:focus,
+body select:focus,
+body .chakra-select:focus {
+  background: rgba(100,200,255,0.2) !important;
+  border-color: rgba(100,200,255,0.7) !important;
+  box-shadow: 0 0 0 3px rgba(100,200,255,0.2) !important;
+}
+
+/* Dark mode options */
+[data-theme="dark"] select option,
+[data-theme="dark"] .chakra-select option,
+body select option,
+body .chakra-select option {
+  background-color: #1e293b !important;
+  background: #1e293b !important;
+  color: #ffffff !important;
+  padding: 12px 16px !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.8 !important;
+  min-height: 44px !important;
+  border-bottom: 1px solid rgba(100,200,255,0.1) !important;
+  transition: all 200ms ease !important;
+}
+
+[data-theme="dark"] select option:hover,
+[data-theme="dark"] select option:active,
+body select option:hover,
+body select option:active {
+  background: linear-gradient(90deg, rgba(100,200,255,0.3), rgba(100,200,255,0.2)) !important;
+  color: #ffffff !important;
+  padding-left: 20px !important;
+}
+
+[data-theme="dark"] select option:checked,
+[data-theme="dark"] select option:focus,
+body select option:checked,
+body select option:focus {
+  background: linear-gradient(90deg, rgba(99,102,241,0.4), rgba(99,102,241,0.3)) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Light mode select */
+[data-theme="light"] select,
+[data-theme="light"] .chakra-select {
+  background: rgba(255,255,255,0.9) !important;
+  color: #1e293b !important;
+  height: auto !important;
+  min-height: 44px !important;
+  border-width: 1px !important;
+}
+
+[data-theme="light"] select:hover,
+[data-theme="light"] .chakra-select:hover {
+  background: rgba(255,255,255,1) !important;
+  border-color: rgba(99,102,241,0.4) !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.08) !important;
+  transform: translateY(-1px) !important;
+}
+
+[data-theme="light"] select:focus,
+[data-theme="light"] .chakra-select:focus {
+  background: rgba(255,255,255,1) !important;
+  border-color: rgba(99,102,241,0.6) !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+}
+
+/* Light mode options */
+[data-theme="light"] select option,
+[data-theme="light"] .chakra-select option {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  color: #1e293b !important;
+  padding: 12px 16px !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.8 !important;
+  min-height: 44px !important;
+  border-bottom: 1px solid rgba(100,116,139,0.1) !important;
+  transition: all 200ms ease !important;
+}
+
+[data-theme="light"] select option:hover,
+[data-theme="light"] select option:active {
+  background: linear-gradient(90deg, rgba(99,102,241,0.15), rgba(99,102,241,0.08)) !important;
+  color: #1e293b !important;
+  padding-left: 20px !important;
+}
+
+[data-theme="light"] select option:checked,
+[data-theme="light"] select option:focus {
+  background: linear-gradient(90deg, rgba(99,102,241,0.25), rgba(99,102,241,0.15)) !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+/* Dropdown open animation */
+@keyframes dropdownSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+select:focus,
+.chakra-select:focus {
+  animation: dropdownSlideIn 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Enhanced select arrow */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%2364c8ff' d='M8 11L3 6h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  padding-right: 40px !important;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+[data-theme="light"] select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%234338ca' d='M8 11L3 6h10z'/%3E%3C/svg%3E") !important;
+}
+
+select:focus {
+  background-position: right 12px center !important;
+}
+
+/* Dropdown list container styling */
+select[size],
+select[multiple] {
+  border-radius: 12px !important;
+  padding: 8px !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3) !important;
+}
+
+[data-theme="dark"] select[size],
+[data-theme="dark"] select[multiple] {
+  background: #1e293b !important;
+  border: 1px solid rgba(100,200,255,0.3) !important;
+}
+
+[data-theme="light"] select[size],
+[data-theme="light"] select[multiple] {
+  background: #ffffff !important;
+  border: 1px solid rgba(100,116,139,0.2) !important;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  background: rgba(100,200,255,0.15) !important;
+  border-color: rgba(100,200,255,0.45) !important;
+  box-shadow: 0 4px 16px rgba(100,200,255,0.15) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  background: rgba(100,200,255,0.18) !important;
+  border-color: rgba(100,200,255,0.6) !important;
+  box-shadow: 0 4px 16px rgba(100,200,255,0.25) !important;
+  outline: none !important;
+  transform: translateY(-1px);
+}
+
+/* Select arrow styling */
+select {
+  appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364c8ff' d='M6 9L1 4h10z'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  padding-right: 40px !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder,
+body input::placeholder,
+body textarea::placeholder {
+  color: rgba(255,255,255,0.4) !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: rgba(30,41,59,0.4) !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Form Labels - Exo 2 */
+[data-theme="dark"] label,
+body label {
+  color: rgba(255,255,255,0.9) !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.03em !important;
+  margin-bottom: 8px !important;
+  text-transform: uppercase !important;
+}
+
+[data-theme="light"] label {
+  color: rgba(30,41,59,0.9) !important;
+  font-family: 'Exo 2', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  letter-spacing: 0.03em !important;
+  margin-bottom: 8px !important;
+  text-transform: uppercase !important;
+}
+
+/* Glass Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  border: 2px solid rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Glass Card Base - Ocean Blue Tint */
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(100,200,255,0.08);
+  border: 1px solid rgba(100,200,255,0.25);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  padding: 24px;
+  transition: all 300ms ease-in-out;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(100,200,255,0.15);
+  border-color: rgba(100,200,255,0.35);
+  background: rgba(100,200,255,0.12);
+}
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 350ms ease-in-out;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* macOS Hello Animation */
+@keyframes macosHello {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(40px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes logoAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    filter: blur(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes greetingFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes titleSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtitleSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spinnerFade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Glass Typography - Sharp Tech Style with Geist Bold */
+.glass-text {
+  font-family: 'Geist', 'Inter', sans-serif !important;
+  background: linear-gradient(180deg, rgba(100,200,255,1), rgba(100,200,255,0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  filter: drop-shadow(0 1px 2px rgba(100,200,255,0.3));
+  position: relative;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+}
+
+
+/* Glass Logo Effect - Crisp */
+.glass-logo {
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.glass-logo:hover {
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+  transform: scale(1.02);
+}
+
+/* Token Usage Tab - Live Update Animations */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shimmer effect for highlighted headings */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

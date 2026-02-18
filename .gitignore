@@ -1,0 +1,46 @@
+# Milvus data volumes
+volumes/
+
+# Credentials and sensitive data
+.env
+.env.*
+*.key
+*.pem
+credentials.json
+
+# Jira/Issue tracking data exports
+jira_*.json
+*_progress_*.json
+jira_ticket_debug_*.json
+analysis_progress_*.json
+
+# Nexus data (if using local Nexus)
+nexus-data/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node.js
+node_modules/
