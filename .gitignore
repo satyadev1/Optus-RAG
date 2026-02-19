@@ -44,3 +44,22 @@ Thumbs.db
 
 # Node.js
 node_modules/
+
+# Block ALL new Python scripts (except core ones)
+*.py
+!claude_rag.py
+!ollama_rag.py
+!codebase_analyzer.py
+!github_analyzer.py
+!image_vectorizer.py
+!jira_client.py
+!token_tracker.py
+!web_crawler.py
+!web_interface.py
+
+# Block all markdown except core docs
+*.md
+!README.md
+!API_DOCUMENTATION.md
+!PRE_COMMIT_CHECKLIST.md
+!KEEP_CLEAN.md
